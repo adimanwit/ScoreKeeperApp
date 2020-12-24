@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Score Keeper App</string>
+    <string name="fouls">Fouls</string>
+    <string name="manchaster_united">Manchaster United</string>
+    <string name="real_madrid">Real Madrit</string>
+    <string name="add_point">Add Point</string>
+    <string name="add_foul">Add Foul</string>
+    <string name="new_game">New game</string>
+</resources>

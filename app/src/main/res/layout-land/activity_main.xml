@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+
+        </LinearLayout><!-- Top layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:orientation="horizontal"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="64dp"
+                android:paddingRight="32dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/real" /> <!--Team A logo -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/real_madrid"
+                    android:textColor="#000000" /> <!-- Name A TextView-->
+
+                <TextView
+                    android:id="@+id/score_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#EDE7F6"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="36sp" /> <!-- Score A TextView-->
+
+                <TextView
+                    android:id="@+id/fouls_team_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="@string/fouls"
+                    android:textSize="24sp" /> <!--Fouls team A TextView-->
+
+                <Button
+                    android:id="@+id/add_point_to_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="#673AB7"
+                    android:gravity="center"
+                    android:onClick="addPointA"
+                    android:text="@string/add_point" /> <!--Goal team A Button-->
+
+                <Button
+                    android:id="@+id/add_foul_to_a"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:onClick="addFoulA"
+                    android:text="@string/add_foul" /> <!--Foul team A Button-->
+
+            </LinearLayout> <!-- Team A -->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                android:paddingRight="64dp">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:src="@drawable/manu" /> <!-- Logo team B -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/manchaster_united"
+                    android:textColor="#000000" /> <!-- Name B TextView-->
+
+                <TextView
+                    android:id="@+id/score_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="#EDE7F6"
+                    android:fontFamily="sans-serif-black"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textColor="#000000"
+                    android:textSize="36sp" /> <!-- Score team B TextView-->
+
+                <TextView
+                    android:id="@+id/fouls_team_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-light"
+                    android:gravity="center"
+                    android:text="@string/fouls"
+                    android:textSize="24sp" /> <!-- Fouls team B TextView-->
+
+                <Button
+                    android:id="@+id/add_point_to_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_weight="1"
+                    android:background="#673AB7"
+                    android:gravity="center"
+                    android:onClick="addPointB"
+                    android:text="@string/add_point" /> <!-- Goal team B Button-->
+
+                <Button
+                    android:id="@+id/add_foul_to_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    android:onClick="addFoulB"
+                    android:text="@string/add_foul" /> <!--Foul team B Button-->
+
+
+            </LinearLayout> <!-- Team B -->
+
+        </LinearLayout><!-- Horizontal layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/new_game"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/purple_200"
+                android:onClick="newGame"
+                android:text="@string/new_game"
+                android:textAllCaps="true" /> <!-- New Game -->
+        </LinearLayout><!-- Bottom layout -->
+    </LinearLayout> <!-- Main layout -->
+</androidx.constraintlayout.widget.ConstraintLayout>
